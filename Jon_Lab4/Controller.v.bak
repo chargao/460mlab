@@ -1,0 +1,16 @@
+// BCD Adder
+module BCD_adder(clk_100MHz,btn1,btn2,btn3,btn4,BCD_in,BCD_out);
+  input clk_100MHz,btn1,btn2,btn3,btn4;
+  input [15:0] BCD_in;
+  output [15:0] BCD_out;
+
+endmodule
+
+
+// Decrementer
+module Decrementer(BCD_in,BCD_out,En_7seg);
+  input [15:0] BCD_in;
+  output [15:0] BCD_out;
+  output En_7seg;
+  
+endmodule

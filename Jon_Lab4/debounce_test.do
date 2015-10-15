@@ -1,0 +1,3 @@
+force clk 0 0ns, 1 50 ns -repeat 100ns
+force k 0 0ns, 1 5ns, 0 10ns, 1 15ns, 0 20ns, 1 25ns, 0 30ns, 1 35ns
+run 600ns
