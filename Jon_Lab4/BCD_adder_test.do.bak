@@ -1,0 +1,2 @@
+force BCD_Xin 16'h0000 0ns, 16'h0000 10ns, 16'h0009 20ns, 16'h0090 30ns, 16'h0099 40ns, 16'h9999 50ns
+force BCD_Yin 16'h0000 0ns, 16'h0001 10ns, 16'h0001 20ns, 16'h0010 30ns, 16'h0099 40ns, 16'h0001 50ns

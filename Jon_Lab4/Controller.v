@@ -1,59 +1,44 @@
-// BCD Adder
-module BCD_adder(clk_100MHz,btnU,btnL,btnR,btnD,Sw0,Sw1,BCD_in,BCD_out);
-  input clk_100MHz,btnU,btnD,btnL,btnR,Sw0,Sw1; // the adder runs off the system clock and takes 6 user inputs
-  input [15:0] BCD_in;  // The adder takes in the BCD number from the decrementer
+module Controller (clk_1Hz,btnU,btnL,btnR,btnD,Sw0,Sw1,BCD_out);
+  input clk_1Hz,btnU,btnD,btnL,btnR,Sw0,Sw1; // the adder runs off the system clock and takes 6 user inputs
   output [15:0] BCD_out;  // The adder outputs the decremented time + any user inputs.
-
-endmodule
-
-
-// Decrementer
-module Decrementer(BCD_in,BCD_out,En_7seg,clk_HalfHz);
-  input [15:0] BCD_in;
-  input clk_HalfHz;       // The Decrementer runs off a half second clk because this is where our 0.5 second
-  output [15:0] BCD_out;  // flash rate will come from. There is an internal counter to cause decrement every
-  output reg En_7seg;     // second instead of every .5 seconds
   
-  reg counter;
+  reg [15:0] BCD_Time;
+  wire [15:0] BCD_in;
+  wire [15:0] BCD_0,BCD_30,BCD_120,BCD_180,BCD_300,BCD_out30,BCD_out120,BCD_out180,BCD_out300;
+  wire Cout30,Cout120,Cout180,Cout300;
+  
+  assign BCD_out = BCD_Time;
   
   initial
     begin
-      counter <= 0;
-      En_7seg <= 1;
+      BCD_Time <= 16'd0;
     end
     
-  always @(posedge clk_HalfHz)
+  always @(posedge clk_1Hz, posedge btnU, posedge btnL, posedge btnR, posedge btnD, posedge Sw0, posedge Sw1)
     begin
       
-    // 7 Segment Flashing logic
-      
-      //En_7seg <= 1;             // Default is enable on (may not need this line)
-      if (BCD_out <= 16'h0180)  // If 180 seconds or less, flash every second
-        begin
-          if (counter)
-             En_7seg <= ~BCD_Out[0]; // Only enable on the Even numbers.
-        end    
-      else if (BCD_out == 0)    // If 0 seconds remain, flash every half second
-        begin
-          En_7seg <= ~En_7seg;  // flashs 7 segment every half second
-        end
+      if(btnU)
+        BCD_Time <= (Cout30) ? 16'h9999 : BCD_out30;
+      else if(btnL)
+        BCD_Time <= (Cout120) ? 16'h9999 : BCD_out120;
+      else if(btnR)
+        BCD_Time <= (Cout180) ? 16'h9999 : BCD_out180;
+      else if(btnD)
+        BCD_Time <= (Cout300) ? 16'h9999 : BCD_out300;
+      else if(Sw0)
+        BCD_Time <= 16'h0015;
+      else if(Sw1)
+        BCD_Time <= 16'h0185;
       else
-        En_7seg <= 1;           // Default is En on
-    
-    // Decrement logic
-    
-    if (counter)
-      begin
-        // BCD <= BCD - 1; whatever logic needed goes here.
-      end
-    
-    counter <= ~counter; // counter oscillates from 0 to 1 and back.
-    
-    /* It's worth noting here that we could have simplified the decrementer a ton without the 7 seg enable
-       logic. But that would have required creating a "flasher" module which also took the 16bit BCD
-       as input which seemed a bit wasteful and silly. Either way, we achieve our goal.
-    */
-    
-    end    
-
+        BCD_Time <= BCD_in;
+    end
+      
+  
+Decrementer Dec1 (BCD_Time, BCD_out, BCD_in);
+      
+BCD_4digit_adder BCD1(BCD_in,16'h0030,BCD_out30,Cout30);
+BCD_4digit_adder BCD2(BCD_in,16'h0120,BCD_out120,Cout120);
+BCD_4digit_adder BCD3(BCD_in,16'h0180,BCD_out180,Cout180);
+BCD_4digit_adder BCD4(BCD_in,16'h0300,BCD_out300,Cout300);
+      
 endmodule

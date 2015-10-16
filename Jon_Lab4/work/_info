@@ -3,133 +3,245 @@ K3
 13
 cModel Technology
 Z0 dC:\modeltech64_10.1\examples
-vbcd_seven
-Z1 I;dz]o^b<S[Q8o8AI^HL>;0
-Z2 VHLSD=Fj2eFL?fK03zJzCG0
-Z3 dF:\EE460M\Lab4
-Z4 w1444857732
-Z5 8F:/EE460M/Lab4/7_seg_single_display.v
-Z6 FF:/EE460M/Lab4/7_seg_single_display.v
-L0 1
-Z7 OL;L;10.1;51
+vBCD_4digit_adder
+Z1 V_nklEn;`9oYaf0?Yk4H@l1
 r1
 31
+Z2 Ie4T=fG3Z0ei^TZB]e?>W<2
+Z3 dE:\EE460M\Lab4
+Z4 w1444954216
+Z5 8E:/EE460M/Lab4/BCD_adder.v
+Z6 FE:/EE460M/Lab4/BCD_adder.v
+L0 16
+Z7 OL;L;10.1;51
 Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z9 !s100 Po3Poh^B=3ji7md;4TS]]3
-Z10 !s108 1444857734.600000
-Z11 !s107 F:/EE460M/Lab4/7_seg_single_display.v|
-Z12 !s90 -reportprogress|300|-work|work|-vopt|F:/EE460M/Lab4/7_seg_single_display.v|
+Z9 n@b@c@d_4digit_adder
+Z10 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/BCD_adder.v|
+Z11 !s100 eJeP8AVD_akA:^LAe;=CJ3
+Z12 !s108 1444954269.649000
+Z13 !s107 E:/EE460M/Lab4/BCD_adder.v|
+!i10b 1
+!s85 0
+vBCD_adder
+Z14 V0>AokZQA=P`cDmVJ80jgD3
+r1
+31
+Z15 I1^E>mMlTiLCT7LP;0fLo33
+R3
+Z16 w1444868008
+Z17 8E:/EE460M/Lab4/Controller.v
+Z18 FE:/EE460M/Lab4/Controller.v
+L0 2
+R7
+R8
+Z19 n@b@c@d_adder
+Z20 !s107 E:/EE460M/Lab4/Controller.v|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Controller.v|
+Z22 !s100 <m_OEAd@>z1@Gg<zZ?k]I3
+Z23 !s108 1444941947.106000
+!i10b 1
+!s85 0
+vbcd_seven
+Z24 I;dz]o^b<S[Q8o8AI^HL>;0
+Z25 VHLSD=Fj2eFL?fK03zJzCG0
+Z26 dF:\EE460M\Lab4
+Z27 w1444857732
+Z28 8F:/EE460M/Lab4/7_seg_single_display.v
+Z29 FF:/EE460M/Lab4/7_seg_single_display.v
+L0 1
+R7
+r1
+31
+R8
+Z30 !s100 Po3Poh^B=3ji7md;4TS]]3
+Z31 !s108 1444857734.600000
+Z32 !s107 F:/EE460M/Lab4/7_seg_single_display.v|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|F:/EE460M/Lab4/7_seg_single_display.v|
 !i10b 1
 !s85 0
 vButton_db_sp
-Z13 I7;KFo746[6lcUSBMam]^M1
-Z14 V3Z<o`JhRg4Q^aLZWRCZ_U0
+Z34 I9NP_6S8=]oR5`_eP?V4oJ0
+Z35 V3Z<o`JhRg4Q^aLZWRCZ_U0
 R3
-Z15 w1444863684
-Z16 8F:/EE460M/Lab4/Debounce_sp.v
-Z17 FF:/EE460M/Lab4/Debounce_sp.v
+Z36 w1444863684
+Z37 8E:/EE460M/Lab4/Debounce_sp.v
+Z38 FE:/EE460M/Lab4/Debounce_sp.v
 L0 3
 R7
 r1
 31
-Z18 !s90 -reportprogress|300|-work|work|-vopt|F:/EE460M/Lab4/Debounce_sp.v|
+Z39 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Debounce_sp.v|
 R8
-Z19 n@button_db_sp
+Z40 n@button_db_sp
+Z41 !s107 E:/EE460M/Lab4/Debounce_sp.v|
+Z42 !s100 L97eGENXIeTk1kmVFWe1F2
+Z43 !s108 1444941947.501000
 !i10b 1
-Z20 !s100 ]G^L9UOOjDKl@ok3E@bO;1
 !s85 0
-Z21 !s108 1444863685.829000
-Z22 !s107 F:/EE460M/Lab4/Debounce_sp.v|
 vbutton_db_sp
-Z23 V[P;5`XgBJAZkRRk:8eeUA2
+Z44 V[P;5`XgBJAZkRRk:8eeUA2
 r1
 31
-Z24 I]Idg?_UZb>:;X>B8bEz2n1
-Z25 dE:\EE460M\Lab4
-Z26 w1444774744
-Z27 8E:/EE460M/Lab4/Debounce_sp.v
-Z28 FE:/EE460M/Lab4/Debounce_sp.v
+Z45 I]Idg?_UZb>:;X>B8bEz2n1
+R3
+Z46 w1444774744
+R37
+R38
 L0 3
 R7
 R8
-Z29 !s107 E:/EE460M/Lab4/Debounce_sp.v|
-Z30 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Debounce_sp.v|
-Z31 !s100 1QfdioimMlD4hIBCQ<a=N3
-Z32 !s108 1444774762.724000
+R41
+R39
+Z47 !s100 1QfdioimMlD4hIBCQ<a=N3
+Z48 !s108 1444774762.724000
 !i10b 1
 !s85 0
 vcomplexDivider
-Z33 I6ZX<FaohCf:Vfe_9daZII1
-Z34 V=TU31IE4VOXBH:3N]8Bz63
-R25
-Z35 w1444776096
-Z36 8E:/EE460M/Lab4/Divider.v
-Z37 FE:/EE460M/Lab4/Divider.v
+Z49 I6ZX<FaohCf:Vfe_9daZII1
+Z50 V=TU31IE4VOXBH:3N]8Bz63
+R3
+Z51 w1444776096
+Z52 8E:/EE460M/Lab4/Divider.v
+Z53 FE:/EE460M/Lab4/Divider.v
 L0 1
 R7
 r1
 31
 R8
-Z38 ncomplex@divider
-Z39 !s107 E:/EE460M/Lab4/Divider.v|
-Z40 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Divider.v|
-Z41 !s100 G:JGzcQXBKXbd==lBf2<h1
-Z42 !s108 1444776112.216000
+Z54 ncomplex@divider
+Z55 !s107 E:/EE460M/Lab4/Divider.v|
+Z56 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Divider.v|
+Z57 !s100 G:JGzcQXBKXbd==lBf2<h1
+Z58 !s108 1444776112.216000
+!i10b 1
+!s85 0
+vController
+Z59 VT_`PVX94^`nJ7=>JP^e2I1
+r1
+31
+Z60 I7=`D3A;h>DP7U]^V^PTSC1
+R3
+Z61 w1444957148
+R17
+R18
+L0 1
+R7
+R21
+R8
+Z62 n@controller
+R20
+!i10b 1
+!s85 0
+Z63 !s100 iCOhVn^oaf8;1B?bm58Vz3
+Z64 !s108 1444957150.049000
+vDecrementer
+Z65 VV`>HGLHY`F;:R1TS@I3gQ0
+r1
+31
+Z66 IEB<fW?LZKDXz?S3O2]05c2
+R3
+Z67 w1444953902
+Z68 8E:/EE460M/Lab4/Decrementer.v
+Z69 FE:/EE460M/Lab4/Decrementer.v
+L0 6
+R7
+R8
+Z70 n@decrementer
+Z71 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Decrementer.v|
+Z72 !s100 P783kVn^Ib]Y<iT3]A0233
+Z73 !s108 1444954477.305000
+Z74 !s107 E:/EE460M/Lab4/Decrementer.v|
 !i10b 1
 !s85 0
 vdiv_test
-Z43 V70SYdToV>cKC5lY^Cj0]70
+Z75 V70SYdToV>cKC5lY^Cj0]70
 r1
 31
-Z44 I=<B2:h?;GO`BXBnk:>7MH1
-R25
-Z45 w1444776406
-Z46 8E:/EE460M/Lab4/div_test.v
-Z47 FE:/EE460M/Lab4/div_test.v
+Z76 I=<B2:h?;GO`BXBnk:>7MH1
+R3
+Z77 w1444776406
+Z78 8E:/EE460M/Lab4/div_test.v
+Z79 FE:/EE460M/Lab4/div_test.v
 L0 1
 R7
 R8
-Z48 !s100 JWoBehU=dkhQZ>gFR2[gz1
-Z49 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/div_test.v|
-Z50 !s108 1444777028.317000
-Z51 !s107 E:/EE460M/Lab4/div_test.v|
+Z80 !s100 JWoBehU=dkhQZ>gFR2[gz1
+Z81 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/div_test.v|
+Z82 !s108 1444777028.317000
+Z83 !s107 E:/EE460M/Lab4/div_test.v|
 !i10b 1
 !s85 0
 vDivider
-Z52 !s100 PK5fM5oI8B@CQZ9;GG7F]2
-Z53 I:WDb6S]XEhbU6a8fKg_?U1
-Z54 VIA?a@^b>VCW0ble2cioM63
+Z84 IV>Rd_SB63iPn:11N??gUU1
+Z85 VIA?a@^b>VCW0ble2cioM63
 R3
-Z55 w1444777024
-Z56 8F:/EE460M/Lab4/Divider.v
-Z57 FF:/EE460M/Lab4/Divider.v
+Z86 w1444777024
+R52
+R53
 L0 1
 R7
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|-vopt|F:/EE460M/Lab4/Divider.v|
+R56
 R8
-Z59 n@divider
-Z60 !s108 1444863641.420000
-Z61 !s107 F:/EE460M/Lab4/Divider.v|
+Z87 n@divider
+R55
+Z88 !s100 L:W;@jMc4hWI^UjeI<K1G3
+Z89 !s108 1444941946.588000
+!i10b 1
+!s85 0
+vflasher
+Z90 V31>KKH;bR4jZ0BZn=aOM20
+r1
+31
+Z91 I^>0X;CZQkHLo`FDdk_Qk@1
+R3
+Z92 w1444952330
+Z93 8E:/EE460M/Lab4/Flasher.v
+Z94 FE:/EE460M/Lab4/Flasher.v
+L0 1
+R7
+R8
+Z95 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/Flasher.v|
+Z96 !s100 Q:DVOGJaTnabSTMF1Q6>O1
+Z97 !s108 1444952341.576000
+Z98 !s107 E:/EE460M/Lab4/Flasher.v|
 !i10b 1
 !s85 0
 vFour_Digit_7_seg_Display
-!i10b 1
-!s100 l@TXhi8iSMCV9F;zdJ[Vb3
-IdTQ:QHD3zo3=LQL8:2:K_0
-VK1a1jWKfCk6SP<KO>^^^k0
+Z99 I@K=57XSD3UzT@H^Y6YI1?2
+Z100 VK1a1jWKfCk6SP<KO>^^^k0
 R3
-w1444865034
-Z62 8F:/EE460M/Lab4/7_Segment_Display_logic.v
-Z63 FF:/EE460M/Lab4/7_Segment_Display_logic.v
+Z101 w1444865034
+Z102 8E:/EE460M/Lab4/7_Segment_Display_logic.v
+Z103 FE:/EE460M/Lab4/7_Segment_Display_logic.v
+L0 1
+R7
+r1
+31
+R8
+Z104 n@four_@digit_7_seg_@display
+Z105 !s100 dfS6Q]5fc9BAX9CG;[;`V0
+Z106 !s108 1444941947.846000
+Z107 !s107 E:/EE460M/Lab4/7_Segment_Display_logic.v|
+Z108 !s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/7_Segment_Display_logic.v|
+!i10b 1
+!s85 0
+vtop
+!i10b 1
+!s100 iXP_g=]TUV1XYNZ:8IOZI0
+IPX79VSI^::DEmj88I9?eP1
+VdUnFSh?QOKf]1>C]b=N953
+R3
+w1444959164
+8E:/EE460M/Lab4/TOP.v
+FE:/EE460M/Lab4/TOP.v
 L0 1
 R7
 r1
 !s85 0
 31
-!s108 1444865038.752000
-!s107 F:/EE460M/Lab4/7_Segment_Display_logic.v|
-Z64 !s90 -reportprogress|300|-work|work|-vopt|F:/EE460M/Lab4/7_Segment_Display_logic.v|
+!s108 1444959184.757000
+!s107 E:/EE460M/Lab4/TOP.v|
+!s90 -reportprogress|300|-work|work|-vopt|E:/EE460M/Lab4/TOP.v|
 R8
-Z65 n@four_@digit_7_seg_@display

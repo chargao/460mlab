@@ -1,0 +1,21 @@
+module top (btnU,btnL,btnR,btnD,Sw0,Sw1,clk_100MHz,An0,An1,An2,An3,ca,cb,cc,cd,ce,cf,cg);
+  input btnU,btnL,btnR,btnD,Sw0,Sw1,clk_100MHz;
+  output An0,An1,An2,An3,ca,cb,cc,cd,ce,cf,cg;
+
+
+
+
+
+Controller ctrl (clk_1Hz,btnU,btnL,btnR,btnD,Sw0,Sw1,BCD_out);
+
+Divider Clk_100Hz (clk100Mhz,amount,slowClk);
+Divider Clk_1Hz (clk100Mhz,amount,slowClk);
+Divider Clk_HalfHz (clk100Mhz,amount,slowClk);
+Divider Clk_Db (clk100Mhz,amount,slowClk);
+
+Four_Digit_7_seg_Display seven (BCD_16bit,clk_100Hz,En_7seg,an0,an1,an2,an3,ca,cb,cc,cd,ce,cf,cg);
+
+Button_db_sp BtnU (k, clk_db, clk_100MHz, out);
+Button_db_sp BtnL (k, clk_db, clk_100MHz, out);
+Button_db_sp BtnR (k, clk_db, clk_100MHz, out);
+Button_db_sp BtnD (k, clk_db, clk_100MHz, out);
