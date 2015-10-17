@@ -1,1 +1,8 @@
+C:/Modeltech_pe_edu_10.4a/examples/460mlab/460mlab4/bcd_seven.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/460mlab4/bcd_seven.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module BCD_Seven_Display
 
+Top level modules:
+	BCD_Seven_Display
+
+} {} {}}

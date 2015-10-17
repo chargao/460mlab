@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Fri Oct 16 17:42:03 2015
+# Process ID: 4276
+# Log file: C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab4synth/lab4synth.runs/impl_1/top.vdi
+# Journal file: C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab4synth/lab4synth.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
