@@ -3,14 +3,15 @@
 `define d3 BCD_in[11:8]
 `define d4 BCD_in[15:12]
 
-module Decrementer(BCD_in, BCD_to_7seg, BCD_to_adder);
+/*
+module Decrementer(BCD_in, BCD_to_adder);
   input [15:0] BCD_in;
-  output [15:0] BCD_to_7seg, BCD_to_adder;
+  output [15:0] BCD_to_adder;
   
   reg[3:0] s1,s2,s3,s4;
   reg c1,c2,c3;
   
-  assign BCD_to_7seg = BCD_in;
+  //assign BCD_to_7seg = BCD_in;
   assign BCD_to_adder = {s4,s3,s2,s1};
   
   always @*
@@ -88,3 +89,32 @@ module Decrementer(BCD_in, BCD_to_7seg, BCD_to_adder);
       
     end
 endmodule
+*/
+
+
+
+module Decrementer(BCD_in, BCD_to_adder);
+   input [15:0] BCD_in;
+   output [15:0] BCD_to_adder;
+   
+   wire [3:0] s1,s2,s3,s4;
+   wire c1,c2,c3;
+   
+   assign s1 = (`d1 == 0) ? 4'd9 : `d1 - 1;
+   //assign `z1 = s1;
+   assign c1 = (`d1 == 0) ? 1'b1 : 1'b0;
+   
+   assign s2 = ((`d2 == 0) && (c1 == 1)) ? 4'd9 : `d2 - c1;
+   //assign `z2 = s2;
+   assign c2 = ((`d2 == 0) && (c1 == 1)) ? 1'b1 : 1'b0;
+    
+   assign s3 = ((`d3 == 0) && (c2 == 1)) ? 4'd9 : `d3 - c2;
+   //assign `z3 = s3;
+   assign c3 = ((`d3 == 0) && (c2 == 1)) ? 1'b1 : 1'b0;
+   
+   assign s4 = ((`d4 == 0) && (c3 == 1)) ? 4'd9 : `d4 - c3;
+   //assign `z4 = s4;
+   
+   assign BCD_to_adder = {s4,s3,s2,s1};
+   
+ endmodule

@@ -16,7 +16,7 @@ always @*
       end
     else if (BCD_in <= 16'h0180 && BCD_in > 0)
       begin
-          En_7seg = ~BCD_in[0];
+          En_7seg = BCD_in[0];
       end
     else
       begin

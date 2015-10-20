@@ -26,20 +26,6 @@ Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
 Top level modules:
 	Decrementer
 
-} {} {}} E:/EE460M/Lab4/TOP.v {1 {vlog -work work -vopt E:/EE460M/Lab4/TOP.v
-Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
--- Compiling module top
-
-Top level modules:
-	top
-
-} {} {}} E:/EE460M/Lab4/7_Segment_Display_logic.v {1 {vlog -work work -vopt E:/EE460M/Lab4/7_Segment_Display_logic.v
-Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
--- Compiling module Four_Digit_7_seg_Display
-
-Top level modules:
-	Four_Digit_7_seg_Display
-
 } {} {}} E:/EE460M/Lab4/Debounce_sp.v {1 {vlog -work work -vopt E:/EE460M/Lab4/Debounce_sp.v
 Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
 -- Compiling module Button_db_sp
@@ -47,11 +33,25 @@ Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
 Top level modules:
 	Button_db_sp
 
+} {} {}} E:/EE460M/Lab4/TOP.v {1 {vlog -work work -vopt E:/EE460M/Lab4/TOP.v
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+-- Compiling module top
+
+Top level modules:
+	top
+
 } {} {}} E:/EE460M/Lab4/Divider.v {1 {vlog -work work -vopt E:/EE460M/Lab4/Divider.v
 Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
 -- Compiling module Divider
 
 Top level modules:
 	Divider
+
+} {} {}} E:/EE460M/Lab4/7_Segment_Display_logic.v {1 {vlog -work work -vopt E:/EE460M/Lab4/7_Segment_Display_logic.v
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+-- Compiling module Four_Digit_7_seg_Display
+
+Top level modules:
+	Four_Digit_7_seg_Display
 
 } {} {}}

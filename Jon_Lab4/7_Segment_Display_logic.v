@@ -56,7 +56,7 @@ module Four_Digit_7_seg_Display (BCD_16bit,clk_100Hz,En_7seg,an0,an1,an2,an3,ca,
              
     end // End Always block 1
     
-    always @(BCD_to_Display)
+    always @(BCD_to_Display, En_7seg)
       begin 
         if(En_7seg) // This is the enable display signal.
           begin   

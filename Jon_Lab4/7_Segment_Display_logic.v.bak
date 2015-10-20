@@ -1,6 +1,6 @@
-module Four_Digit_7_seg_Display (BCD_16bit,clk_100Hz,an0,an1,an2,an3,ca,cb,cc,cd,ce,cf,cg);
+module Four_Digit_7_seg_Display (BCD_16bit,clk_100Hz,En_7seg,an0,an1,an2,an3,ca,cb,cc,cd,ce,cf,cg);
   input [15:0] BCD_16bit;
-  input clk_100Hz;
+  input clk_100Hz,En_7seg;
   output an0,an1,an2,an3,ca,cb,cc,cd,ce,cf,cg;
   
   reg [1:0] Digit_Select;
@@ -57,9 +57,11 @@ module Four_Digit_7_seg_Display (BCD_16bit,clk_100Hz,an0,an1,an2,an3,ca,cb,cc,cd
     end // End Always block 1
     
     always @(BCD_to_Display)
-      begin      
-        case (BCD_to_Display)       // Activate Cathodes corresponding to the BCD.
-                                    // THIS IS ACTIVE LOW!!
+      begin 
+        if(En_7seg) // This is the enable display signal.
+          begin   
+          case (BCD_to_Display)       // Activate Cathodes corresponding to the BCD.
+                                      // THIS IS ACTIVE LOW!!
            4'b0000:  Seven = 7'b1000000;
            4'b0001:  Seven = 7'b1111001;
            4'b0010:  Seven = 7'b0100100;
@@ -74,7 +76,13 @@ module Four_Digit_7_seg_Display (BCD_16bit,clk_100Hz,an0,an1,an2,an3,ca,cb,cc,cd
            default: Seven = 7'bxxxxxxx;
            
         endcase
-         
-      end // End Always block 2
+        end
+      
+      else begin
+        Seven = 7'b1111111; // If enable display == 0, display nothing on the 7 segment.
+      end                   // This is useful for Flashing our 7 seg. 
+        
+        
+    end // End Always block 2
   
 endmodule
