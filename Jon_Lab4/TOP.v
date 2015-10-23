@@ -9,19 +9,19 @@ wire En_7seg;                             // 7 Segment Enable
 
 
 
-Controller Controller (clk_1Hz, btnU_out, btnL_out, btnR_out, btnD_out, Sw0, Sw1, BCD_Time_value);
+Controller Controller (clk_100MHz, btnU_out, btnL_out, btnR_out, btnD_out, Sw0, Sw1, BCD_Time_value);
 
 Divider Clk_100Hz (clk_100MHz, 28'd50000, clk_100Hz);
 Divider Clk_1Hz (clk_100MHz,    28'd50000000, clk_1Hz);
 Divider Clk_HalfHz (clk_100MHz, 28'd50000000, clk_HalfHz);
-Divider Clk_Db (clk_100MHz, 28'd10000000, clk_db);
+Divider Clk_Db (clk_100MHz, 28'd100000, clk_db);
 
 Four_Digit_7_seg_Display seven (BCD_Time_value, clk_100Hz, En_7seg, An0, An1, An2, An3, ca, cb, cc, cd, ce, cf, cg);
 
-Button_db_sp BtnU (btnU, clk_db, btnU_out);
-Button_db_sp BtnL (btnL, clk_db, btnL_out);
-Button_db_sp BtnR (btnR, clk_db, btnR_out);
-Button_db_sp BtnD (btnD, clk_db, btnD_out);
+Button_db_sp BtnU (btnU, clk_db, clk_100MHz, btnU_out);
+Button_db_sp BtnL (btnL, clk_db, clk_100MHz, btnL_out);
+Button_db_sp BtnR (btnR, clk_db, clk_100MHz, btnR_out);
+Button_db_sp BtnD (btnD, clk_db, clk_100MHz, btnD_out);
 
 flasher F1 (BCD_Time_value, clk_HalfHz, En_7seg);
 
