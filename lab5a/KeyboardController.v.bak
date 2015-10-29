@@ -1,0 +1,5 @@
+module KeyboardController (PS2CLK,DATA)
+input PS2CLK, DATA;
+
+
+endmodule

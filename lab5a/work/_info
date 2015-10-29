@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Charlie/Dropbox/my stuff/school/~EE 460M/Lab3_turnin/Lab3_turnin
+vKeyboardController
+!s110 1446145063
+!i10b 1
+!s100 Qm5hULJ6MX`?k[e7M1Ukl2
+IEGiHN6:KW5^VlV>NY;YNN0
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a
+w1446145059
+8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
+FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
+L0 1
+OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1446145063.000000
+!s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v|
+!s101 -O0
+!i113 1
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@keyboard@controller
