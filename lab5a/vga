@@ -1,0 +1,8 @@
+module VGA (clk,Hsync,Vsync,R,G,B)
+input clk;
+output hsync,vsync;
+output [3:0] R,G,B;
+
+
+
+endmodule

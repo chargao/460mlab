@@ -1,16 +1,30 @@
-C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v
+C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module KeyboardController
+
+Top level modules:
+	KeyboardController
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module PartATop
 
 Top level modules:
 	PartATop
 
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module KeyboardController
+-- Compiling module VGA
 
 Top level modules:
-	KeyboardController
+	VGA
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Divider
+
+Top level modules:
+	Divider
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

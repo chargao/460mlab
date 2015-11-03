@@ -1,0 +1,11 @@
+module VGATop (clk,sw,Hsync,Vsync,vgaRed,vgaGreen,vgaBlue);
+input clk;
+input [7:0] sw;
+output Hsync,Vsync;
+output [3:0] vgaRed,vgaGreen,vgaBlue;
+wire pixelClk;
+
+
+Divider div (clk,28'd2,pixelClk);
+VGA one (pixelClk,sw,Hsync,Vsync,vgaRed,vgaGreen,vgaBlue);
+endmodule
