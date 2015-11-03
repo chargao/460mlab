@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Tue Nov 03 15:44:24 2015
+| Date         : Tue Nov 03 16:40:08 2015
 | Host         : JJ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VGATop_utilization_synth.rpt -pb VGATop_utilization_synth.pb
 | Design       : VGATop
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   66 |     0 |     20800 |  0.32 |
-|   LUT as Logic          |   66 |     0 |     20800 |  0.32 |
+| Slice LUTs*             |   68 |     0 |     20800 |  0.33 |
+|   LUT as Logic          |   68 |     0 |     20800 |  0.33 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |   57 |     0 |     41600 |  0.14 |
 |   Register as Flip Flop |   57 |     0 |     41600 |  0.14 |
@@ -150,13 +150,13 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |   56 |        Flop & Latch |
 | LUT1     |   30 |                 LUT |
-| LUT6     |   16 |                 LUT |
+| LUT6     |   18 |                 LUT |
 | OBUF     |   14 |                  IO |
-| LUT5     |   13 |                 LUT |
-| LUT4     |    9 |                 LUT |
+| LUT5     |   12 |                 LUT |
+| LUT4     |   11 |                 LUT |
 | IBUF     |    9 |                  IO |
 | CARRY4   |    7 |          CarryLogic |
-| LUT3     |    5 |                 LUT |
+| LUT3     |    6 |                 LUT |
 | LUT2     |    5 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |

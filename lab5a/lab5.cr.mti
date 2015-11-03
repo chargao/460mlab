@@ -12,6 +12,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	PartATop
 
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module VGATop
+
+Top level modules:
+	VGATop
+
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module VGA
