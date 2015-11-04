@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Tue Nov 03 18:45:10 2015
+# Process ID: 4792
+# Log file: C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.runs/impl_1/GameTop.vdi
+# Journal file: C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source GameTop.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2.1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 465.219 ; gain = 249.805
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 468.410 ; gain = 3.188

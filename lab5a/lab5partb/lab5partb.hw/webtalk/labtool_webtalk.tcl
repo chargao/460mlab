@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Nov 03 16:14:02 2015" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Nov 03 18:19:56 2015" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2015.2.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1302555" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,13 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "f439eeebbfc95687b0ed1dac8fcd9a75" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "032c38e6-a641-4d9d-817c-3dfb9f577221" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
-webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
-webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
-webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i3-2365M CPU @ 1.40GHz" -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "1397 MHz" -context "user_environment"
-webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
-webtalk_add_data -client project -key system_ram -value "4.000 GB" -context "user_environment"
+webtalk_add_data -client project -key project_iteration -value "7" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i3-2365M CPU @ 1.40GHz" -context "user_environment"
@@ -28,11 +22,6 @@ webtalk_add_data -client project -key cpu_speed -value "1397 MHz" -context "user
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "4.000 GB" -context "user_environment"
 webtalk_register_client -client labtool
-webtalk_add_data -client labtool -key cable -value "Digilent/Basys3/15000000" -context "labtool\\usage"
-webtalk_add_data -client labtool -key chain -value "0362D093" -context "labtool\\usage"
-webtalk_add_data -client labtool -key pgmcnt -value "01:00:00" -context "labtool\\usage"
-webtalk_add_data -client labtool -key cable -value "Digilent/Basys3/15000000" -context "labtool\\usage"
-webtalk_add_data -client labtool -key chain -value "0362D093" -context "labtool\\usage"
 webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
-webtalk_transmit -clientid 3652719138 -regid "211089819_0_0_503" -xml C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_transmit -clientid 358202187 -regid "211089819_0_0_503" -xml C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/lab5partb/lab5partb.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate

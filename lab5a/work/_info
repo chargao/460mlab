@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/Charlie/Dropbox/my stuff/school/~EE 460M/Lab3_turnin/Lab3_turnin
 vDivider
-Z0 !s110 1446578457
+Z0 !s110 1446597403
 !i10b 1
 !s100 g9I=CD8l[LJ9nZ7G=:l=>3
 I@]E0ZLhhLhTE5Hk]`WLUD2
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1446578457.000000
+Z4 !s108 1446597403.000000
 !s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v|
 !s101 -O0
@@ -45,15 +45,59 @@ R3
 r1
 !s85 0
 31
-Z6 !s108 1446578456.000000
+R4
 !s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v|
 !s101 -O0
 !i113 1
 R5
 n@four_@digit_7_seg_@display
+vGame_Controller
+Z6 !s110 1446597404
+!i10b 1
+!s100 8N^VD=^5oNoc?RWD^U5iU2
+IWC7e<ST0`TzHToAXA3Q<A3
+R1
+R2
+w1446596861
+8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v
+FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z7 !s108 1446597404.000000
+!s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v|
+!s101 -O0
+!i113 1
+R5
+n@game_@controller
+vGameTop
+R6
+!i10b 1
+!s100 ;BDQi=P:0:0FJ3HzIWOTl1
+IQXzb@TKl2G4b5HjHAG9g>0
+R1
+R2
+w1446597396
+8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v
+FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v|
+!s101 -O0
+!i113 1
+R5
+n@game@top
 vKeyboardController
-!s110 1446578456
+R0
 !i10b 1
 !s100 2zQoj<2[H8kC;Lne@IEfa3
 IZKlzE^dRaezdmBO<C64I20
@@ -67,7 +111,7 @@ R3
 r1
 !s85 0
 31
-R6
+R4
 !s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v|
 !s101 -O0
@@ -96,14 +140,14 @@ R4
 !i113 1
 R5
 n@part@a@top
-vVGA
+vPartB_VGA
 R0
 !i10b 1
-!s100 4OBDb5PIO=h7lDL:WDAa^2
-Ie;?AF?maZHUaO5jhZdefe3
+!s100 >PaP20L;EZmCcbn=e2CaA0
+IP>l[>;ZYz[S;QJLZ_RMVk0
 R1
 R2
-w1446577768
+w1446591953
 8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
 FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
 L0 1
@@ -117,6 +161,28 @@ R4
 !s101 -O0
 !i113 1
 R5
+n@part@b_@v@g@a
+vVGA
+R0
+!i10b 1
+!s100 CzjHA0;Q[O8>?5NC?>D7J1
+IRAUFjD`WOazkcmJTN3Sz82
+R1
+R2
+w1446592399
+8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v
+FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v|
+!s101 -O0
+!i113 1
+R5
 n@v@g@a
 vVGATop
 R0
@@ -125,7 +191,7 @@ R0
 ITCUfiVIcYTB7ZLV8MlMQ73
 R1
 R2
-w1446578273
+w1446578232
 8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v
 FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v
 L0 1

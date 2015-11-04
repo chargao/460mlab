@@ -1,0 +1,13 @@
+
+****** Webtalk v2015.2.1 (64-bit)
+  **** SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+  **** IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.hw/webtalk/labtool_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 60.988 ; gain = 0.027
+
+    while executing
+"webtalk_transmit -clientid 2118255969 -regid "211089819_0_0_503" -xml C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.hw/we..."
+    (file "C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.hw/webtalk/labtool_webtalk.tcl" line 35)
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 03 18:52:46 2015...
