@@ -7,9 +7,8 @@ wire [9:0] Xcoord,Ycoord;
 //wire [7:0] keypress;
 
 
-Divider div (clk,28'd2,pixelClk);
+Divider div (clk,28'd2,pixelClk); //pixelClk = 25Mhz
 VGA veegeeay (pixelClk,snake,Hsync,Vsync,vgaRed,vgaGreen,vgaBlue,Xcoord,Ycoord);
-
 
 Game_Controller game(Xcoord,Ycoord,clk,snake);
 //Game_Controller game(keypress,rdy,Xcoord,Ycoord,clk,snake);
