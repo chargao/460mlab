@@ -9,31 +9,45 @@ module Game_Controller(Xcoord,Ycoord,clk,snake);
 input [9:0] Xcoord,Ycoord;
 input clk;//,newKeyStrobe;
 output reg snake;
-reg [9:0] snakeX, snakeY [4:0]; //top left of each block
+reg [9:0] snakeX [2:0];
+reg [9:0] snakeY [2:0]; //top left of each block
 reg [1:0] direction;
-reg [27:0] moveClk;
+//reg []
+wire game_clk;
 integer i = 0;
 
-initial begin snakeX[0] <= 10'd400; snakeY[0] <= 10'd200; moveClk <= 0; end
+initial begin 
+    snakeX[0] <= 10'd20; snakeY[0] <= 10'd0; 
+    snakeX[1] <= 10'd30; snakeY[1] <= 10'd0; 
+    snakeX[2] <= 10'd40; snakeY[2] <= 10'd0; 
+end
 
 always @(posedge clk) begin 
-    if(moveClk == 10'd100000000) begin 
-        moveClk <= 1;
-        snakeX[0] <= snakeX[0]+1;
-        snakeY[0] <= snakeY[0]+1;
-    end 
-    else begin moveClk<=moveClk+1; end
-    
-//	snakeX[1] <= 10'd200; snakeY[1] <= 10'd30;
-//	snakeX[2] <= 10'd80;  snakeY[2] <= 10'd150;
-//	snakeX[3] <= 10'd70;  snakeY[3] <= 10'd300;
-//	snakeX[4] <= 10'd60;  snakeY[4] <= 10'd100;
-	
-	//for (i = 0; i < 5; i = i + 1) begin
-		if(Xcoord >= snakeX[i] && Xcoord <= snakeX[i]+9 && Ycoord >= snakeY[i] && Ycoord <= snakeY[i]+9) 
-		begin snake <= 1'b1; end
-		else begin snake <= 1'b0; end
-	//end
 
+    if(Xcoord >= snakeX[0] && Xcoord <= (snakeX[0] + 10'd9) && Ycoord >= snakeY[0] && Ycoord <= (snakeY[0] + 10'd9)) 
+        begin snake <= 1'b1; end
+    else if(Xcoord >= snakeX[1] && Xcoord <= (snakeX[1] + 10'd9) && Ycoord >= snakeY[1] && Ycoord <= (snakeY[1] + 10'd9)) 
+        begin snake <= 1'b1; end
+    else if(Xcoord >= snakeX[2] && Xcoord <= (snakeX[2] + 10'd9) && Ycoord >= snakeY[2] && Ycoord <= (snakeY[2] + 10'd9)) 
+        begin snake <= 1'b1; end
+    else begin snake <= 1'b0; end
+		
 end
+
+always @(posedge game_clk) begin
+    if (snakeX[0] >= 10'd0 && snakeX[0]+10'd9 <10'd640 && snakeY[0] >= 10'd0 && snakeY[0]+10'd9 <10'd480) //assumes X[0], Y[0] is head
+    begin  
+        snakeX[0] <= snakeX[0] + 10'd5;
+        snakeY[0] <= snakeY[0] + 10'd5;
+        
+        snakeX[1] <= snakeX[1] + 10'd5;
+        snakeY[1] <= snakeY[1] + 10'd5;
+        
+        snakeX[2] <= snakeX[2] + 10'd5;
+        snakeY[2] <= snakeY[2] + 10'd5;
+    end
+end
+
+Divider game_clk1(clk, 28'd50000000, game_clk);
+
 endmodule

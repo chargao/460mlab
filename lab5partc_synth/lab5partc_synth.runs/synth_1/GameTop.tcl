@@ -15,9 +15,9 @@ set_property parent.project_path C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
+  C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/divider.v
   C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/game_controller.v
   C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/partcvga.v
-  C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/divider.v
   C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/part_c_top.v
 }
 read_xdc C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/constrs_1/imports/lab5/Basys3_Master.xdc

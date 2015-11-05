@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Wed Nov 04 13:53:26 2015
+| Date         : Thu Nov 05 13:41:22 2015
 | Host         : JJ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file GameTop_control_sets_placed.rpt
 | Design       : GameTop
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |     8 |
-| Minimum Number of register sites lost to control set restrictions |    40 |
+| Number of unique control sets                                     |     7 |
+| Minimum Number of register sites lost to control set restrictions |    26 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,29 +33,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               6 |            5 |
+| No           | No                    | No                     |              26 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              65 |           17 |
-| Yes          | No                    | No                     |              31 |           12 |
+| No           | Yes                   | No                     |              66 |           16 |
+| Yes          | No                    | No                     |              40 |           16 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              10 |            2 |
+| Yes          | Yes                   | No                     |              10 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------+----------------------------+----------------------------+------------------+----------------+
-|  Clock Signal  |        Enable Signal       |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+----------------+----------------------------+----------------------------+------------------+----------------+
-|  slowClk_BUFG  |                            |                            |                2 |              3 |
-|  clk_IBUF_BUFG |                            |                            |                3 |              3 |
-|  slowClk_BUFG  |                            | veegeeay/Hcount[9]_i_1_n_0 |                3 |             10 |
-|  slowClk_BUFG  | veegeeay/Hcount[9]_i_1_n_0 | veegeeay/Vcount[9]_i_1_n_0 |                2 |             10 |
-|  clk_IBUF_BUFG | game/moveClk[27]_i_1_n_0   |                            |                5 |             11 |
-|  slowClk_BUFG  | veegeeay/Xcoord[9]_i_1_n_0 |                            |                7 |             20 |
-|  clk_IBUF_BUFG |                            | game/moveClk[27]_i_1_n_0   |                7 |             27 |
-|  clk_IBUF_BUFG |                            | div/clear                  |                7 |             28 |
-+----------------+----------------------------+----------------------------+------------------+----------------+
++---------------------------+----------------------------+--------------------------------------+------------------+----------------+
+|        Clock Signal       |        Enable Signal       |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++---------------------------+----------------------------+--------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG            |                            |                                      |                3 |              3 |
+|  slowClk_BUFG             |                            | veegeeay/Hcount[9]_i_1_n_0           |                2 |             10 |
+|  slowClk_BUFG             | veegeeay/Hcount[9]_i_1_n_0 | veegeeay/Vcount[9]_i_1_n_0           |                3 |             10 |
+|  slowClk_BUFG             |                            |                                      |                9 |             23 |
+|  clk_IBUF_BUFG            |                            | game/game_clk1/counter[0]_i_1__0_n_0 |                7 |             28 |
+|  clk_IBUF_BUFG            |                            | div/clear                            |                7 |             28 |
+|  snakeY_reg[2][9]_i_3_n_0 | game/p_12_out              |                                      |               16 |             40 |
++---------------------------+----------------------------+--------------------------------------+------------------+----------------+
 
 
