@@ -1,10 +1,9 @@
 | state           | next (S,R,P,E) |
 |-----------------|----------------|
-| S0 blank screen |   S1,S0,S0,S0  |
-| S1 init game	  |   S2,S2,S3,S0  |
-| S2 playing game |   S1,S2,S3,S0  |
-| S3 pause game   |   S1,S2,S3,S0  |
-| S4 dead         |   S1,S4,S4,S0  |
+| S0 blank        |   S1,S0,S0,S0  |
+| S1 playing game |   S1,S1,S2,S0  |
+| S2 pause game   |   S1,S1,S2,S0  |
+| S3 dead         |   S1,S3,S3,S0  |
 
 
 relevant keys

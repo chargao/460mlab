@@ -15,20 +15,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 263.063 ; gain = 86.543
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 262.418 ; gain = 86.023
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'GameTop' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/part_c_top.v:1]
-INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/divider.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/divider.v:1]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/partcvga.v:1]
-INFO: [Synth 8-226] default block is never used [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/partcvga.v:31]
-INFO: [Synth 8-4471] merging register 'vgaGreen_reg[3:0]' into 'vgaBlue_reg[3:0]' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/partcvga.v:32]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/partcvga.v:1]
-INFO: [Synth 8-638] synthesizing module 'Game_Controller' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/game_controller.v:7]
-INFO: [Synth 8-256] done synthesizing module 'Game_Controller' (3#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/game_controller.v:7]
-INFO: [Synth 8-256] done synthesizing module 'GameTop' (4#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5a/part_c_top.v:1]
+INFO: [Synth 8-638] synthesizing module 'GameTop' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/part_c_top.v:1]
+INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/divider.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/partcvga.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/partcvga.v:31]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/partcvga.v:1]
+INFO: [Synth 8-638] synthesizing module 'Game_Controller' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/game_controller.v:7]
+INFO: [Synth 8-256] done synthesizing module 'Game_Controller' (3#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/game_controller.v:7]
+INFO: [Synth 8-638] synthesizing module 'kb_readout' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/kb_readout.v:4]
+INFO: [Synth 8-638] synthesizing module 'Four_Digit_7_seg_Display' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/7_seg.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/7_seg.v:64]
+INFO: [Synth 8-256] done synthesizing module 'Four_Digit_7_seg_Display' (4#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/7_seg.v:1]
+INFO: [Synth 8-638] synthesizing module 'kb_scan' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/Keyboard_scanner.v:1]
+INFO: [Synth 8-638] synthesizing module 'single_pulser' [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/Single_pulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'single_pulser' (5#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/Single_pulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'kb_scan' (6#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/Keyboard_scanner.v:1]
+INFO: [Synth 8-256] done synthesizing module 'kb_readout' (7#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/kb_readout.v:4]
+INFO: [Synth 8-256] done synthesizing module 'GameTop' (8#1) [C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5partc_synth/lab5partc_synth.srcs/sources_1/imports/lab5/part_c_top.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 297.285 ; gain = 120.766
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 297.629 ; gain = 121.234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -38,7 +46,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 297.285 ; gain = 120.766
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 297.629 ; gain = 121.234
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -52,25 +60,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 590.621 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 593.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "game_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -83,13 +95,31 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 12    
+	   2 Input     10 Bit       Adders := 22    
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 8     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 5     
+	               28 Bit    Registers := 1     
+	               10 Bit    Registers := 14    
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 10    
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -107,17 +137,60 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
 	               10 Bit    Registers := 4     
-	                4 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 3     
 Module Game_Controller 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 10    
+	   2 Input     10 Bit       Adders := 20    
 +---Registers : 
-	               10 Bit    Registers := 4     
+	               28 Bit    Registers := 1     
+	               10 Bit    Registers := 10    
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input      5 Bit        Muxes := 10    
+	  11 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	  11 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
+Module Four_Digit_7_seg_Display 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module single_pulser 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module kb_scan 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module kb_readout 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -130,39 +203,82 @@ BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 590.621 ; gain = 414.102
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Parallel Reinference  : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 593.988 ; gain = 417.594
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\veegeeay/vgaBlue_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaBlue_reg[3] ) is unused and will be removed from module GameTop.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\game/game_speed_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game/game_speed_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\veegeeay/vgaBlue_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaRed_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaGreen_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaGreen_reg[0] ) is unused and will be removed from module GameTop.
 WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaBlue_reg[2] ) is unused and will be removed from module GameTop.
 WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaBlue_reg[1] ) is unused and will be removed from module GameTop.
 WARNING: [Synth 8-3332] Sequential element (\veegeeay/vgaBlue_reg[0] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[27] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[26] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[25] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[24] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[21] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[20] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[19] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[18] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[17] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[16] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[15] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[14] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[13] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[12] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[11] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[10] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[9] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[8] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[7] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[6] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[5] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[4] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[3] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[2] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/game_speed_reg[0] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg3_reg[0] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[0] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg3_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg4_reg[0] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg4_reg[1] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg4_reg[2] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[2] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg4_reg[3] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[3] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[4] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\game/seg5_reg[5] ) is unused and will be removed from module GameTop.
+WARNING: [Synth 8-3332] Sequential element (\kb_one/kb1/keypress_reg[0] ) is unused and will be removed from module GameTop.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 593.988 ; gain = 417.594
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -170,10 +286,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:02:00 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:02:00 . Memory (MB): peak = 593.988 ; gain = 417.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,7 +301,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Technology Mapping : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -203,7 +319,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:02:08 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -216,7 +332,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:08 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,13 +344,27 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Start Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 600.168 ; gain = 423.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|GameTop     | kb_one/kb1/keypress_reg[8] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -250,47 +380,56 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |    30|
-|3     |LUT1   |    62|
-|4     |LUT2   |    18|
-|5     |LUT3   |    15|
-|6     |LUT4   |    70|
-|7     |LUT5   |    31|
-|8     |LUT6   |    67|
-|9     |FDRE   |   140|
-|10    |FDSE   |     2|
-|11    |IBUF   |     1|
-|12    |OBUF   |    14|
+|1     |BUFG   |     4|
+|2     |CARRY4 |   113|
+|3     |LUT1   |   165|
+|4     |LUT2   |   121|
+|5     |LUT3   |    78|
+|6     |LUT4   |   187|
+|7     |LUT5   |    44|
+|8     |LUT6   |   114|
+|9     |SRL16E |     1|
+|10    |FDCE   |    87|
+|11    |FDPE   |    49|
+|12    |FDRE   |   218|
+|13    |FDSE   |     4|
+|14    |IBUF   |     3|
+|15    |OBUF   |    26|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+--------------+----------------+------+
-|      |Instance      |Module          |Cells |
-+------+--------------+----------------+------+
-|1     |top           |                |   453|
-|2     |  div         |Divider         |    71|
-|3     |  game        |Game_Controller |   264|
-|4     |    game_clk1 |Divider_0       |    71|
-|5     |  veegeeay    |VGA             |   100|
-+------+--------------+----------------+------+
++------+--------------+-------------------------+------+
+|      |Instance      |Module                   |Cells |
++------+--------------+-------------------------+------+
+|1     |top           |                         |  1214|
+|2     |  div         |Divider                  |    97|
+|3     |  game        |Game_Controller          |   622|
+|4     |    game_clk1 |Divider_2                |    97|
+|5     |  kb_one      |kb_readout               |   294|
+|6     |    Seg       |Four_Digit_7_seg_Display |    19|
+|7     |    clk_7_seg |Divider_0                |    70|
+|8     |    kb1       |kb_scan                  |   104|
+|9     |      div1    |Divider_1                |    71|
+|10    |      sp1     |single_pulser            |     4|
+|11    |  veegeeay    |VGA                      |   167|
++------+--------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 590.621 ; gain = 414.102
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:09 . Memory (MB): peak = 600.168 ; gain = 423.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:49 . Memory (MB): peak = 590.621 ; gain = 88.406
-Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:10 . Memory (MB): peak = 590.621 ; gain = 414.102
+Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:42 . Memory (MB): peak = 600.168 ; gain = 94.383
+Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:09 . Memory (MB): peak = 600.168 ; gain = 423.773
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 116 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 23 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-22 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 590.621 ; gain = 381.742
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 590.621 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 05 13:40:19 2015...
+synth_design: Time (s): cpu = 00:02:03 ; elapsed = 00:02:09 . Memory (MB): peak = 600.168 ; gain = 392.039
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.305 . Memory (MB): peak = 600.168 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 06 16:55:21 2015...

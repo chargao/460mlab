@@ -18,37 +18,73 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/lab5a/divider.v">
+      <File Path="$PSRCDIR/sources_1/imports/lab5/Single_pulse.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../lab5a/divider.v"/>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/Single_pulse.v"/>
+          <Attr Name="ImportTime" Val="1446681136"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/lab5/divider.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/divider.v"/>
           <Attr Name="ImportTime" Val="1446501140"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab5a/game_controller.v">
+      <File Path="$PSRCDIR/sources_1/imports/lab5/Keyboard_scanner.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../lab5a/game_controller.v"/>
-          <Attr Name="ImportTime" Val="1446596861"/>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/Keyboard_scanner.v"/>
+          <Attr Name="ImportTime" Val="1446682472"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab5a/partcvga.v">
+      <File Path="$PSRCDIR/sources_1/imports/lab5/7_seg.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../lab5a/partcvga.v"/>
-          <Attr Name="ImportTime" Val="1446592399"/>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/7_seg.v"/>
+          <Attr Name="ImportTime" Val="1446675890"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab5a/part_c_top.v">
+      <File Path="$PSRCDIR/sources_1/imports/lab5/game_controller.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../lab5a/part_c_top.v"/>
-          <Attr Name="ImportTime" Val="1446597396"/>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/game_controller.v"/>
+          <Attr Name="ImportTime" Val="1446774540"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/lab5/partcvga.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/partcvga.v"/>
+          <Attr Name="ImportTime" Val="1446749550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/lab5/kb_readout.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/kb_readout.v"/>
+          <Attr Name="ImportTime" Val="1446760432"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/lab5/part_c_top.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/EE460M/lab5/part_c_top.v"/>
+          <Attr Name="ImportTime" Val="1446760488"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

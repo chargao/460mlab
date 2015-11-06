@@ -1,6 +1,6 @@
 module VGA (clk,snake,Hsync,Vsync,vgaRed,vgaGreen,vgaBlue,Xcoord,Ycoord);
 input clk;
-input snake;
+input [1:0] snake;
 output reg Hsync,Vsync;
 output reg [3:0] vgaRed,vgaGreen,vgaBlue;
 reg [9:0] Hcount,Vcount;
@@ -29,8 +29,10 @@ always @(posedge clk) begin
     if (Hcount >= 10'd0 && Hcount < 10'd640 &&  Vcount >= 10'd0 && Vcount < 10'd480) begin 
         
         case (snake)
-            1'b0: 	 {vgaRed,vgaGreen,vgaBlue} <= 12'h000;// 0 0 0 black  background
-            1'b1: 	 {vgaRed,vgaGreen,vgaBlue} <= 12'hF00;// F 0 0 red    snake 
+            2'b00: 	 {vgaRed,vgaGreen,vgaBlue} <= 12'h000;// 0 0 0 black  background
+            2'b01: 	 {vgaRed,vgaGreen,vgaBlue} <= 12'hF00;// F 0 0 red    snake 
+            2'b10:   {vgaRed,vgaGreen,vgaBlue} <= 12'h6F0;// 6 F 0 green  granny smith
+            2'b11:   {vgaRed,vgaGreen,vgaBlue} <= 12'h888;// 8 8 8 gray   walls
             default: {vgaRed,vgaGreen,vgaBlue} <= 12'hFFF;// F F F white  ?!?!?!
         endcase
     end //end if within 640x480 display
