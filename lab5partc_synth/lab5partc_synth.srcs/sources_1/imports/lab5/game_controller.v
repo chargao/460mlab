@@ -10,8 +10,8 @@ input [9:0] Xcoord,Ycoord;
 input [7:0] BCD_8bit;
 input clk;//,newKeyStrobe;
 output reg [1:0] snake;
-reg [9:0] snakeX [0:4];
-reg [9:0] snakeY [0:4]; //top left of each block
+reg [9:0] snakeX [0:5];
+reg [9:0] snakeY [0:5]; //top left of each block
 reg [9:0] appleX;
 reg [9:0] appleY;
 reg [1:0] direction;
@@ -20,6 +20,8 @@ reg [1:0] seg2;
 reg [3:0] seg3;
 reg [5:0] seg4;
 reg [7:0] seg5;
+reg [9:0] seg6;
+reg [3:0] snakelen;
 reg [7:0] prev_key_in;
 reg [27:0] game_speed;
 reg reset;
@@ -29,19 +31,21 @@ wire game_en = (state == 2'b01) ? 1 : 0 ;
 
 initial begin 
     state <= 2'b00;
+    snakelen <= 2'd5;
     snakeX[0] <= 10'd620; snakeY[0] <= 10'd240; 
     snakeX[1] <= 10'd630; snakeY[1] <= 10'd240; 
     snakeX[2] <= 10'd640; snakeY[2] <= 10'd240;
     snakeX[3] <= 10'd650; snakeY[3] <= 10'd240; 
     snakeX[4] <= 10'd660; snakeY[4] <= 10'd240;
-    appleX <= 10'd50; appleY <= 10'd30;
+    snakeX[5] <= 10'd660; snakeY[5] <= 10'd240;
+    appleX <= 10'd450; appleY <= 10'd330;
     direction <= 2'b00;
     game_speed <= 28'd12500000;  
 end
 
 always @(posedge clk) begin 
     prev_key_in <= BCD_8bit;
-    if (state == 2'b00) begin snake <= 2'b00; end
+    if (state == 2'b00) begin snake <= 2'b00; end //what to draw on screen
     else if(Xcoord >= snakeX[0] && Xcoord <= (snakeX[0] + 10'd9) && Ycoord >= snakeY[0] && Ycoord <= (snakeY[0] + 10'd9)) 
         begin snake <= 2'b01; end
     else if(Xcoord >= snakeX[1] && Xcoord <= (snakeX[1] + 10'd9) && Ycoord >= snakeY[1] && Ycoord <= (snakeY[1] + 10'd9)) 
@@ -51,7 +55,9 @@ always @(posedge clk) begin
     else if(Xcoord >= snakeX[3] && Xcoord <= (snakeX[3] + 10'd9) && Ycoord >= snakeY[3] && Ycoord <= (snakeY[3] + 10'd9)) 
         begin snake <= 2'b01; end
     else if(Xcoord >= snakeX[4] && Xcoord <= (snakeX[4] + 10'd9) && Ycoord >= snakeY[4] && Ycoord <= (snakeY[4] + 10'd9)) 
-        begin snake <= 2'b01; end    
+        begin snake <= 2'b01; end 
+    else if(Xcoord >= snakeX[5] && Xcoord <= (snakeX[5] + 10'd9) && Ycoord >= snakeY[5] && Ycoord <= (snakeY[5] + 10'd9)) 
+        begin snake <= 2'b01; end 
     else if (Xcoord >= appleX && Xcoord <= (appleX + 10'd9) && Ycoord >= appleY && Ycoord <= (appleY + 10'd9)) 
         begin snake <= 2'b10; end
     else begin snake <= 2'b00; end
@@ -100,11 +106,13 @@ always @(posedge game_clk, posedge reset) begin
         seg3 <= 4'd0;
         seg4 <= 6'd0;
         seg5 <= 8'd0;
+        seg6 <= 8'd0;
         snakeX[0] <= 10'd620; snakeY[0] <= 10'd240; 
         snakeX[1] <= 10'd630; snakeY[1] <= 10'd240; 
         snakeX[2] <= 10'd640; snakeY[2] <= 10'd240;
         snakeX[3] <= 10'd650; snakeY[3] <= 10'd240; 
         snakeX[4] <= 10'd660; snakeY[4] <= 10'd240;
+        snakeX[5] <= 10'd660; snakeY[5] <= 10'd240;
     end
     
     else begin //normal gameplay
@@ -112,6 +120,7 @@ always @(posedge game_clk, posedge reset) begin
         seg3 <= {seg3[1:0] , direction};
         seg4 <= {seg4[3:0] , direction};
         seg5 <= {seg5[5:0] , direction};
+        seg6 <= {seg6[7:0] , direction};
 
         if (snakeX[0] >= 10'd0 && snakeX[0]+10'd9 <10'd640 && snakeY[0] >= 10'd0 && snakeY[0]+10'd9 < 10'd480) begin
             if      (direction == `up) snakeY[0] <= snakeY[0] - 10'd10;
@@ -138,6 +147,44 @@ always @(posedge game_clk, posedge reset) begin
             else if (seg5[7:6] == `le) snakeX[4] <= snakeX[4] - 10'd10;
             else if (seg5[7:6] == `ri) snakeX[4] <= snakeX[4] + 10'd10;
             else if (seg5[7:6] == `dn) snakeY[4] <= snakeY[4] + 10'd10;
+            
+            if (snakelen == 2'd6) begin
+                if      (seg6[9:8] == `up) snakeY[5] <= snakeY[5] - 10'd10;
+                else if (seg6[9:8] == `le) snakeX[5] <= snakeX[5] - 10'd10;
+                else if (seg6[9:8] == `ri) snakeX[5] <= snakeX[5] + 10'd10;
+                else if (seg6[9:8] == `dn) snakeY[5] <= snakeY[5] + 10'd10;
+            end 
+            else begin 
+                if      (seg5[7:6] == `up) snakeY[5] <= snakeY[4] - 10'd10;
+                else if (seg5[7:6] == `le) snakeX[5] <= snakeX[4] - 10'd10;
+                else if (seg5[7:6] == `ri) snakeX[5] <= snakeX[4] + 10'd10;
+                else if (seg5[7:6] == `dn) snakeY[5] <= snakeY[4] + 10'd10;
+            end
+                        
+            if(snakeX[0] == appleX && snakeY[0] == appleY)begin
+                snakeY[5] <= snakeY[4];
+                snakeX[5] <= snakeX[4];
+                seg6 <= {seg6[7:0] , direction};
+//                if      (seg5[7:6] == `up) begin 
+//                    snakeY[5] <= snakeY[4] + 10'd10;
+//                    seg6 <= {seg6[7:0] , direction};
+//                end
+//                else if (seg5[7:6] == `le) begin 
+//                    snakeX[5] <= snakeX[4] + 10'd10; 
+//                    seg6 <= {seg6[7:0] , direction};
+//                end
+//                else if (seg5[7:6] == `ri) begin 
+//                    snakeX[5] <= snakeX[4] - 10'd10; 
+//                    seg6 <= {seg6[7:0] , direction};
+//                end
+//                else if (seg5[7:6] == `dn) begin 
+//                    snakeY[5] <= snakeY[4] - 10'd10;
+//                    seg6 <= {seg5, direction};
+//                end
+                
+                snakelen <= snakelen+1;
+                appleX <= (clk % 64)*10;
+            end
         end //end in range of display
     end //end S0
 end //end game clock

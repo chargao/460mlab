@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date             : Fri Nov 06 16:59:38 2015
+| Date             : Sat Nov 07 16:55:04 2015
 | Host             : JJ running 64-bit major release  (build 9200)
 | Command          : report_power -file GameTop_power_routed.rpt -pb GameTop_power_summary_routed.pb
 | Design           : GameTop
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.099  |
-| Dynamic (W)              | 0.027  |
+| Total On-Chip Power (W)  | 0.100  |
+| Dynamic (W)              | 0.028  |
 | Device Static (W)        | 0.072  |
 | Effective TJA (C/W)      | 5.0    |
 | Max Ambient (C)          | 84.5   |
@@ -50,17 +50,17 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |     0.002 |     1086 |       --- |             --- |
-|   LUT as Logic          |     0.002 |      438 |     20800 |            2.11 |
-|   CARRY4                |    <0.001 |      113 |      8150 |            1.39 |
-|   Register              |    <0.001 |      358 |     41600 |            0.86 |
+| Slice Logic             |     0.002 |     1271 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      559 |     20800 |            2.69 |
+|   CARRY4                |    <0.001 |      134 |      8150 |            1.64 |
+|   Register              |    <0.001 |      387 |     41600 |            0.93 |
 |   BUFG                  |    <0.001 |        3 |        32 |            9.38 |
 |   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
 |   Others                |     0.000 |       22 |       --- |             --- |
-| Signals                 |     0.001 |      642 |       --- |             --- |
+| Signals                 |     0.002 |      771 |       --- |             --- |
 | I/O                     |     0.022 |       29 |       106 |           27.36 |
 | Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.099 |          |           |                 |
+| Total                   |     0.100 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
 | Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,9 +139,9 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| GameTop       |     0.027 |
+| GameTop       |     0.028 |
 |   div         |    <0.001 |
-|   game        |     0.002 |
+|   game        |     0.003 |
 |     game_clk1 |    <0.001 |
 |   kb_one      |     0.002 |
 |     Seg       |    <0.001 |
@@ -149,7 +149,7 @@ Table of Contents
 |     kb1       |    <0.001 |
 |       div1    |    <0.001 |
 |       sp1     |    <0.001 |
-|   veegeeay    |    <0.001 |
+|   veegeeay    |     0.001 |
 +---------------+-----------+
 
 

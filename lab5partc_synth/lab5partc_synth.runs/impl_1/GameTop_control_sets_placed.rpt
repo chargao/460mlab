@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Fri Nov 06 16:57:29 2015
+| Date         : Sat Nov 07 16:52:08 2015
 | Host         : JJ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file GameTop_control_sets_placed.rpt
 | Design       : GameTop
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    25 |
-| Minimum Number of register sites lost to control set restrictions |   114 |
+| Number of unique control sets                                     |    28 |
+| Minimum Number of register sites lost to control set restrictions |   133 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,46 +33,49 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              75 |           35 |
-| No           | No                    | Yes                    |               8 |            5 |
-| No           | Yes                   | No                     |             100 |           27 |
-| Yes          | No                    | No                     |               9 |            3 |
-| Yes          | No                    | Yes                    |             128 |           37 |
-| Yes          | Yes                   | No                     |              38 |           10 |
+| No           | No                    | No                     |              75 |           34 |
+| No           | No                    | Yes                    |              10 |            8 |
+| No           | Yes                   | No                     |             100 |           26 |
+| Yes          | No                    | No                     |              16 |            7 |
+| Yes          | No                    | Yes                    |             148 |           44 |
+| Yes          | Yes                   | No                     |              38 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
-|        Clock Signal       |           Enable Signal           |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+---------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
-|  kb_one/kb1/div1/ff_reg   |                                   |                                        |                1 |              1 |
-|  pixelClk_BUFG            |                                   | veegeeay/vgaRed[3]_i_1_n_0             |                3 |              6 |
-|  kb_one/clk_7_seg/slowClk |                                   |                                        |                2 |              7 |
-|  seg5_reg[7]_i_1_n_0      |                                   | game/reset_reg_n_0                     |                5 |              8 |
-|  clk_IBUF_BUFG            | kb_one/kb1/sp1/E[0]               |                                        |                3 |              9 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeY[4][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeY[3][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeY[2][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeY[1][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeY[0][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeX[4][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeX[3][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeX[2][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeX[1][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  seg5_reg[7]_i_1_n_0      | game/snakeX[0][9]_i_1_n_0         | game/reset_reg_n_0                     |                3 |             10 |
-|  pixelClk_BUFG            |                                   | veegeeay/Hcount[9]_i_1_n_0             |                3 |             10 |
-|  pixelClk_BUFG            | veegeeay/Hcount[9]_i_1_n_0        | veegeeay/Vcount[9]_i_1_n_0             |                3 |             10 |
-|  pixelClk_BUFG            |                                   |                                        |               11 |             22 |
-|  clk_IBUF_BUFG            |                                   |                                        |               12 |             23 |
-| ~PS2Clk_IBUF_BUFG         |                                   |                                        |               10 |             23 |
-|  clk_IBUF_BUFG            |                                   | kb_one/kb1/div1/counter[0]_i_1__1_n_0  |                7 |             28 |
-|  clk_IBUF_BUFG            |                                   | kb_one/clk_7_seg/counter[0]_i_1__0_n_0 |                7 |             28 |
-|  clk_IBUF_BUFG            |                                   | div/counter_reg[0]_i_1_n_2             |                7 |             28 |
-|  clk_IBUF_BUFG            | kb_one/LED_OBUF                   | kb_one/ld                              |                7 |             28 |
-|  clk_IBUF_BUFG            | game/game_clk1/counter[0]_i_2_n_0 | game/game_clk1/counter[0]_i_1_n_0      |                7 |             28 |
-+---------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
++---------------------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
+|              Clock Signal             |           Enable Signal           |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++---------------------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
+|  kb_one/kb1/div1/ff_reg               |                                   |                                        |                1 |              1 |
+|  slowClk_BUFG                         |                                   | veegeeay/vgaRed[3]_i_1_n_0             |                3 |              6 |
+|  kb_one/clk_7_seg/Anode_Active_reg[1] |                                   |                                        |                2 |              7 |
+|  game_clk                             | game/appleX[8]_i_1_n_0            |                                        |                2 |              7 |
+|  clk_IBUF_BUFG                        | kb_one/kb1/sp1/E[0]               |                                        |                5 |              9 |
+|  slowClk_BUFG                         |                                   | veegeeay/Hcount[9]_i_1_n_0             |                2 |             10 |
+|  slowClk_BUFG                         | veegeeay/Hcount[9]_i_1_n_0        | veegeeay/Vcount[9]_i_1_n_0             |                2 |             10 |
+|  game_clk                             |                                   | game/snakeX_reg[1][0]_0                |                8 |             10 |
+|  game_clk                             | game/snakeY[5][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeY[4][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeY[3][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeY[2][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeY[1][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeY[0][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeX[5][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                4 |             10 |
+|  game_clk                             | game/snakeX[4][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeX[3][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeX[2][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeX[1][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  game_clk                             | game/snakeX[0][9]_i_1_n_0         | game/snakeX_reg[1][0]_0                |                3 |             10 |
+|  slowClk_BUFG                         |                                   |                                        |                8 |             22 |
+|  clk_IBUF_BUFG                        |                                   |                                        |               13 |             23 |
+| ~PS2Clk_IBUF_BUFG                     |                                   |                                        |               11 |             23 |
+|  clk_IBUF_BUFG                        |                                   | kb_one/clk_7_seg/counter[0]_i_1__0_n_0 |                7 |             28 |
+|  clk_IBUF_BUFG                        |                                   | kb_one/kb1/div1/counter[0]_i_1__2_n_0  |                7 |             28 |
+|  clk_IBUF_BUFG                        |                                   | div/counter[0]_i_1__1_n_0              |                7 |             28 |
+|  clk_IBUF_BUFG                        | game/game_clk1/counter[0]_i_2_n_0 | game/game_clk1/counter[0]_i_1_n_0      |                7 |             28 |
+|  clk_IBUF_BUFG                        | kb_one/LED_OBUF                   | kb_one/ld                              |                7 |             28 |
++---------------------------------------+-----------------------------------+----------------------------------------+------------------+----------------+
 
 
