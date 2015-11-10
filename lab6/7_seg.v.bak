@@ -4,25 +4,24 @@ input clk_100Hz;
 output reg [3:0] an;
 output reg [6:0] segs;
 
-reg Digit_Select;
-reg [3:0] digit_to_Display;
+reg digit_select;
+reg [3:0] digit_to_display;
 
-initial begin Digit_Select <= 0; end
+initial begin digit_select <= 0; end
 
 always @(posedge clk_100Hz) begin
-  if(Digit_Select == 0) begin Digit_Select <= 1; end   // "10" digit
-  else 			begin Digit_Select <= 0; end   // "01" digit
+  digit_select <= ~digit_select; //"01" or "10" digit
 
-  case (Digit_Select) // Choose which Anode and cathode set to activate. ACTIVE LOW!! 
-  0: begin an <= 4'b1110; digit_to_Display <= bin_in[3:0];  end
-  1: begin an <= 4'b1101; digit_to_Display <= bin_in[7:4];  end
+  case (digit_select) // Choose which Anode and cathode set to activate. ACTIVE LOW!! 
+  0: begin an <= 4'b1110; digit_to_display <= bin_in[3:0];  end
+  1: begin an <= 4'b1101; digit_to_display <= bin_in[7:4];  end
   endcase
   
-  an[3:2] = 2'b11;
+  an[3:2] = 2'b11; //disable top 2 anode digits
 end // End Always block 1
 
-always @(digit_to_Display)begin
-  case (digit_to_Display) // Activate Cathodes per digit. ACTIVE LOW!!
+always @(digit_to_display) begin
+  case (digit_to_display) // Activate Cathodes per digit. ACTIVE LOW!!
   4'b0000:  segs = 7'b1000000; // 0
   4'b0001:  segs = 7'b1111001; // 1
   4'b0010:  segs = 7'b0100100; // 2

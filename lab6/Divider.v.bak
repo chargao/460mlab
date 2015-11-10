@@ -10,7 +10,10 @@ initial begin counter = 0; slowClk = 0; end
 always @ (posedge clk100Mhz)
   begin // begin always block
     if(counter == amount)
-      begin counter <= 1; slowClk <= ~slowClk; end
+      begin // begin if
+        counter <= 1;
+        slowClk <= ~slowClk;
+      end  // end if
     else
       begin // begin else
         counter <= counter + 1;

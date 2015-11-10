@@ -1,5 +1,3 @@
-`define btnL btns[1]
-`define btnR btns[0]
 module top(clk, mode, btns, swtchs, leds, segs, an);
   input clk;
   input[1:0] mode;
@@ -30,8 +28,7 @@ module top(clk, mode, btns, swtchs, leds, segs, an);
 
   //add any other functions you need
   //(e.g. debouncing, multiplexing, clock-division, etc)
-
   Divider dbclk (clk,28'd250000,clk_db);
-  Button_db_sp left (`btnL, clk_db, clk, btns_db[1]);
-  Button_db_sp right(`btnR, clk_db, clk, btns_db[0]);
+  Button_db_sp left (btns[1], clk_db, clk, btns_db[1]);
+  Button_db_sp right(btns[0], clk_db, clk, btns_db[0]);
 endmodule

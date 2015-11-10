@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a
 vButton_db_sp
-Z0 !s110 1447183966
+Z0 !s110 1447193467
 !i10b 1
 !s100 enD80^9bNQz9B>;hMZ3YG0
 I2S=M2:NGhIji4L0NK^a8f2
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1447183966.000000
+Z4 !s108 1447193467.000000
 !s107 C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Debounce_sp.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Debounce_sp.v|
 !s101 -O0
@@ -33,11 +33,11 @@ n@button_db_sp
 vcontroller
 R0
 !i10b 1
-!s100 md?<Q;I@U<?Bzn<9P6U0<1
-I0a;<FT]m^=Vm9QIX4aF[h1
+!s100 hY=o4bz4EV9?83<GGfoJX0
+IMdn8Bg^OLE?5EPDj`X]VL3
 R1
 R2
-w1447182143
+w1447193464
 8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/controller.v
 FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/controller.v
 L0 1
@@ -54,11 +54,11 @@ R5
 vDivider
 R0
 !i10b 1
-!s100 g9I=CD8l[LJ9nZ7G=:l=>3
-IDS;eP_f6<Tj>VSnHkNf`N3
+!s100 LJZMV>V5B4z[@6VD7:`bn2
+Il<[?j8YFMmU5HC;kll1a>0
 R1
 R2
-w1445012255
+w1447191362
 8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Divider.v
 FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Divider.v
 L0 1
@@ -74,13 +74,13 @@ R4
 R5
 n@divider
 vFour_Digit_7_seg_Display
-R0
+!s110 1447193468
 !i10b 1
-!s100 9WD;5NJJVZK]S1aH7LeXI2
-Ii852bnR]HLjZn?0OFVm1z0
+!s100 Z=iU49m^^T:3lfgL]FQUJ2
+IR_nPhHMXZO:Yn3DFKlSK92
 R1
 R2
-w1447183959
+w1447190884
 8C:\Modeltech_pe_edu_10.4a\examples\460mlab\lab6\7_seg.v
 FC:\Modeltech_pe_edu_10.4a\examples\460mlab\lab6\7_seg.v
 L0 1
@@ -119,14 +119,14 @@ R5
 vtop
 R0
 !i10b 1
-!s100 c2ZC7^>ZLdlFdeBMUUnS33
-IWUi>EmTjVgAlUlcRG;hmL3
+!s100 USdaL]J:_?L;N:>L7o8zS0
+ID8Q76zL462J:cLF3GD[ch0
 R1
 R2
-w1447182296
+w1447193340
 8C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/top.v
 FC:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/top.v
-L0 4
+L0 1
 R3
 r1
 !s85 0

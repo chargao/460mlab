@@ -1,9 +1,23 @@
-C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/memory.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/memory.v
+C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/7_seg.v {1 {vlog -work work -stats=none {C:\Modeltech_pe_edu_10.4a\examples\460mlab\lab6\7_seg.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Four_Digit_7_seg_Display
+
+Top level modules:
+	Four_Digit_7_seg_Display
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/memory.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/memory.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module memory
 
 Top level modules:
 	memory
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Debounce_sp.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Debounce_sp.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -11,12 +25,5 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	Button_db_sp
-
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Divider.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab6/Divider.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Divider
-
-Top level modules:
-	Divider
 
 } {} {}}
