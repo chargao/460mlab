@@ -1,9 +1,9 @@
-C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v
+C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Game_Controller
+-- Compiling module KeyboardController
 
 Top level modules:
-	Game_Controller
+	KeyboardController
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_a_top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -12,19 +12,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	PartATop
 
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/KeyboardController.v
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/game_controller.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module KeyboardController
+-- Compiling module Game_Controller
 
 Top level modules:
-	KeyboardController
-
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module PartB_VGA
-
-Top level modules:
-	PartB_VGA
+	Game_Controller
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_b_top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -33,12 +26,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	VGATop
 
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/vga.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module GameTop
+-- Compiling module PartB_VGA
 
 Top level modules:
-	GameTop
+	PartB_VGA
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Divider
+
+Top level modules:
+	Divider
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/7_Segment_Display_logic.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -47,12 +47,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Four_Digit_7_seg_Display
 
-} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/divider.v
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/part_c_top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Divider
+-- Compiling module GameTop
 
 Top level modules:
-	Divider
+	GameTop
 
 } {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab5a/partcvga.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
