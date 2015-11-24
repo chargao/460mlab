@@ -7,7 +7,7 @@ input [1:0] btns_db;//btnL,btnR
 input [7:0] swtchs;//switch numerical input
 
 output cs; //channel select
-output we; //write enable
+output reg we; //write enable
 output[6:0] address; //mem addr aka DAR
 output reg [7:0] data_out; //out to data bus 
 output[7:0] leds; //address display
@@ -17,9 +17,11 @@ output[3:0] an; //7seg value anodes
 wire clk_500Hz; //for 7seg
 
 reg [6:0] SPR,DAR;
-reg [7:0] DVR;
+reg [7:0] DVR,R0;
+reg [3:0] state;
 
 initial begin 
+  state <= 4'h0;
   SPR <= 7'h7F;
   DAR <= 7'h00;
 end
@@ -31,6 +33,55 @@ assign address = DAR;
 always @(posedge clk) begin
   we <= 1'b0;
   if (we == 1'b0) begin DVR <= data_in; end
+
+  case (state)
+  4'd00: begin
+  end
+  4'd01: begin
+    data_out <= swtchs;	//push
+    DAR <= SPR;
+    we  <= 1;
+    state <= 4'd02;
+  end
+  4'd02: begin
+    SPR <= SPR - 1;
+    DAR <= SPR + 1;
+    state <= 4'd00;
+  end
+  4'd03: begin
+    SPR <= SPR + 1;	//pop w/o read
+    DAR <= SPR + 1;
+    state <= 4'd00;
+  end
+  4'd04: begin
+    DAR <= SPR + 1;	//add
+    state <= 4'd05;
+  end
+  4'd05: begin
+    R0 <= data_in;
+    
+  end
+  4'd06: begin
+  end
+  4'd07: begin
+  end
+  4'd08: begin
+  end
+  4'd09: begin
+  end
+  4'd10: begin
+  end
+  4'd11: begin
+  end
+  4'd12: begin
+  end
+  4'd13: begin
+  end
+  4'd14: begin
+  end
+  4'd15: begin
+  end
+  endcase
 
   case({mode,btns_db})
   4'b0010: begin //pop 

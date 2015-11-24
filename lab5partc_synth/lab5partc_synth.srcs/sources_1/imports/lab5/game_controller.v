@@ -32,14 +32,19 @@ wire game_en = (state == 2'b01) ? 1 : 0 ;
 initial begin 
     state <= 2'b00;
     snakelen <= 2'd5;
-    snakeX[0] <= 10'd620; snakeY[0] <= 10'd240; 
-    snakeX[1] <= 10'd630; snakeY[1] <= 10'd240; 
-    snakeX[2] <= 10'd640; snakeY[2] <= 10'd240;
-    snakeX[3] <= 10'd650; snakeY[3] <= 10'd240; 
-    snakeX[4] <= 10'd660; snakeY[4] <= 10'd240;
-    snakeX[5] <= 10'd660; snakeY[5] <= 10'd240;
+    seg2 <= `ri;
+    seg3 <= {`ri,`ri};
+    seg4 <= {`ri,`ri,`ri};
+    seg5 <= {`ri,`ri,`ri,`ri};
+    seg6 <= {`ri,`ri,`ri,`ri,`ri};
+    snakeX[0] <= 10'd40; snakeY[0] <= 10'd240; 
+    snakeX[1] <= 10'd30; snakeY[1] <= 10'd240; 
+    snakeX[2] <= 10'd20; snakeY[2] <= 10'd240;
+    snakeX[3] <= 10'd10; snakeY[3] <= 10'd240; 
+    snakeX[4] <= 10'd00; snakeY[4] <= 10'd240;
+    snakeX[5] <= 10'd00; snakeY[5] <= 10'd240;
     appleX <= 10'd450; appleY <= 10'd330;
-    direction <= 2'b00;
+    direction <= `ri;
     game_speed <= 28'd12500000;  
 end
 
@@ -87,7 +92,7 @@ always @(posedge clk) begin
         if (prev_key_in != 8'h1B) begin 
             reset <= 1'b1; 
             state <= 2'b01; 
-            direction <= `le; 
+            direction <= `ri; 
             game_speed <= 28'd12500000; 
         end 
     end 
@@ -96,23 +101,30 @@ always @(posedge clk) begin
     default : direction <= direction;
     endcase
     
+    if ((snakeX[0] == snakeX[1] && snakeY[0] == snakeY[1]) ||
+        (snakeX[0] == snakeX[2] && snakeY[0] == snakeY[2]) ||
+        (snakeX[0] == snakeX[3] && snakeY[0] == snakeY[3]) ||
+        (snakeX[0] == snakeX[4] && snakeY[0] == snakeY[4]) ||
+        (snakeX[0] == snakeX[5] && snakeY[0] == snakeY[5])) begin 
+    state <= 2'b11; end
+                
     if (reset == 1'b1) begin reset <= 1'b0; end
     
 end //end system clock
 
 always @(posedge game_clk, posedge reset) begin
     if(reset) begin // special reset
-        seg2 <= 2'd0;
-        seg3 <= 4'd0;
-        seg4 <= 6'd0;
-        seg5 <= 8'd0;
-        seg6 <= 8'd0;
-        snakeX[0] <= 10'd620; snakeY[0] <= 10'd240; 
-        snakeX[1] <= 10'd630; snakeY[1] <= 10'd240; 
-        snakeX[2] <= 10'd640; snakeY[2] <= 10'd240;
-        snakeX[3] <= 10'd650; snakeY[3] <= 10'd240; 
-        snakeX[4] <= 10'd660; snakeY[4] <= 10'd240;
-        snakeX[5] <= 10'd660; snakeY[5] <= 10'd240;
+        seg2 <= `ri;
+        seg3 <= {`ri,`ri};
+        seg4 <= {`ri,`ri,`ri};
+        seg5 <= {`ri,`ri,`ri,`ri};
+        seg6 <= {`ri,`ri,`ri,`ri,`ri};
+        snakeX[0] <= 10'd40; snakeY[0] <= 10'd240; 
+        snakeX[1] <= 10'd30; snakeY[1] <= 10'd240; 
+        snakeX[2] <= 10'd20; snakeY[2] <= 10'd240;
+        snakeX[3] <= 10'd10; snakeY[3] <= 10'd240; 
+        snakeX[4] <= 10'd00; snakeY[4] <= 10'd240;
+        snakeX[5] <= 10'd00; snakeY[5] <= 10'd240;
     end
     
     else begin //normal gameplay
@@ -165,25 +177,9 @@ always @(posedge game_clk, posedge reset) begin
                 snakeY[5] <= snakeY[4];
                 snakeX[5] <= snakeX[4];
                 seg6 <= {seg6[7:0] , direction};
-//                if      (seg5[7:6] == `up) begin 
-//                    snakeY[5] <= snakeY[4] + 10'd10;
-//                    seg6 <= {seg6[7:0] , direction};
-//                end
-//                else if (seg5[7:6] == `le) begin 
-//                    snakeX[5] <= snakeX[4] + 10'd10; 
-//                    seg6 <= {seg6[7:0] , direction};
-//                end
-//                else if (seg5[7:6] == `ri) begin 
-//                    snakeX[5] <= snakeX[4] - 10'd10; 
-//                    seg6 <= {seg6[7:0] , direction};
-//                end
-//                else if (seg5[7:6] == `dn) begin 
-//                    snakeY[5] <= snakeY[4] - 10'd10;
-//                    seg6 <= {seg5, direction};
-//                end
-                
                 snakelen <= snakelen+1;
-                appleX <= (clk % 64)*10;
+                appleX <= ( {$random} % 63 )*10;
+                appleY <= ( {$random} % 47 )*10;
             end
         end //end in range of display
     end //end S0
