@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Mon Nov 30 13:23:24 2015
+# Process ID: 4584
+# Log file: F:/EE460M/Lab7/Lab7_synth/Lab7_synth.runs/synth_1/Complete_MIPS.vds
+# Journal file: F:/EE460M/Lab7/Lab7_synth/Lab7_synth.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Complete_MIPS.tcl

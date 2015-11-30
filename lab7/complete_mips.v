@@ -1,20 +1,22 @@
-module Complete_MIPS(CLK, RST, A_Out, D_Out, led, SW);
+module Complete_MIPS(clk, led, sw); // A_Out, D_Out, 
 /* Will need to be modified to add functionality */
-input CLK;
-input RST;
-input [1:0] SW;
-output [6:0] A_Out;
-output [31:0] D_Out;
+input clk;
+//input RST;
+input [1:0] sw;
+//output [6:0] A_Out;
+//output [31:0] D_Out;
 output [7:0] led;
 
-wire CS, WE;
-wire [31:0] ADDR, Mem_Bus;
+wire CS, WE, slowCLK;
+wire [6:0] ADDR;
+wire [31:0] Mem_Bus;
 
 assign A_Out = ADDR;
 assign D_Out = Mem_Bus;
 
-MIPS CPU(CLK, RST, CS, WE, ADDR, Mem_Bus, led, SW);
-Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
+Divider slowclk(clk,28'd33000000,slowCLK);
+MIPS CPU(slowCLK, CS, WE, ADDR, Mem_Bus, led, sw);
+Memory MEM(CS, WE, slowCLK, ADDR, Mem_Bus);
 endmodule
 
 module Memory(CS, WE, CLK, ADDR, Mem_Bus);
@@ -29,7 +31,7 @@ reg [31:0] RAM [0:127];
 
 initial begin
   /* Write your Verilog-Text IO code here */
-  $readmemh("mips_test_part_a.txt",RAM);
+  $readmemh("PartA_test.asm",RAM);
 end
 
 assign Mem_Bus = ((CS == 1'b0) || (WE == 1'b1)) ? 32'bZ : data_out;

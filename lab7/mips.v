@@ -6,7 +6,7 @@
 `define halt SW[1] 
 `define reset SW[0]
 
-module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus, reg1_lowbits, SW);
+module MIPS (CLK, CS, WE, ADDR, Mem_Bus, reg1_lowbits, SW);
 input CLK, RST;
 input [1:0] SW;
 output reg CS, WE;

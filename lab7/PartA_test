@@ -1,0 +1,11 @@
+andi $v1, $v1, 0 # clear r1
+loop1:
+addi $v2, $v1, 1 # r2 gets 1
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+add $v2, $v2, $v2 # r2 2x
+j loop1
