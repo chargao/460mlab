@@ -5,6 +5,8 @@
 `define numshift instr[10:6]
 `define halt SW[1] 
 `define reset SW[0]
+`define HI special_reg_product_save[63:32]
+`define LO special_reg_product_save[31:0]
 
 module MIPS (CLK, CS, WE, ADDR, Mem_Bus, reg1_lowbits, SW);
 input CLK;
@@ -26,7 +28,7 @@ parameter sll =  6'b000000;
 parameter jr =   6'b001000;
 
 //new special
-parameter mult = 6'b011000;
+parameter mult = 6'b011000; // added
 parameter mfhi = 6'b010000;
 parameter mflo = 6'b010010;
 parameter add8 = 6'b101101;
@@ -46,28 +48,33 @@ parameter bne =  6'b000101;
 parameter j =    6'b000010;
 
 //new non-special
-parameter jal = 6'b000011;
-parameter lui = 6'b001111;
+parameter jal = 6'b000011; // added
+parameter lui = 6'b001111; // added
 
 //instruction format
 parameter R = 2'd0;
 parameter I = 2'd1;
 parameter J = 2'd2;
 
+//integers
+integer i = 0;
+
 //internal signals
 reg [5:0] op, opsave;
 wire [1:0] format;
 reg [31:0] instr, pc, npc, alu_result;
+reg [63:0] special_reg_product, special_reg_product_save;
 wire [31:0] imm_ext, alu_in_A, alu_in_B, reg_in, readreg1, readreg2;
 reg [31:0] alu_result_save;
 reg alu_or_mem, alu_or_mem_save, regw, writing, reg_or_imm, reg_or_imm_save;
 reg fetchDorI;
 wire [4:0] dr;
 reg [2:0] state, nstate;
+reg [32:0] tempadd;
 
 //combinational
 assign imm_ext = (instr[15] == 1)? {16'hFFFF, instr[15:0]} : {16'h0000, instr[15:0]};//Sign extend immediate field
-assign dr = (format == R)? instr[15:11] : instr[20:16]; //Destination Register MUX (MUX1)
+assign dr = (format == R)? instr[15:11] : (format == J)? 5'd31 : if (opsave == rbit || opsave == rev)? instr[25:21] : instr[20:16]; //Destination Register MUX (MUX1)
 assign alu_in_A = readreg1;
 assign alu_in_B = (reg_or_imm_save)? imm_ext : readreg2; //ALU MUX (MUX2)
 assign reg_in = (alu_or_mem_save)? Mem_Bus : alu_result_save; //Data MUX
@@ -91,7 +98,7 @@ end
 
 always @(*) begin
   fetchDorI = 0; CS = 0; WE = 0; regw = 0; writing = 0; alu_result = 32'd0;
-  npc = pc; op = jr; reg_or_imm = 0; alu_or_mem = 0; nstate = 3'd0;
+  npc = pc; op = jr; reg_or_imm = 0; alu_or_mem = 0; nstate = 3'd0; special_reg_product = 64'dx;
   case (state)
   0: begin //fetch
     
@@ -143,10 +150,51 @@ always @(*) begin
       npc = alu_in_A;
       nstate = 3'd0;
     end
+	else if (`opcode == jal) begin
+		alu_result = pc;
+		npc = instr[6:0];
+	end
+	else if (`opcode == lui) begin
+		alu_result = {alu_in_B[15:0],16'd0};
+	end
+	else if (opsave == mult) begin
+		special_reg_product = alu_in_A * alu_in_B;
+	end
+	else if (opsave == mfhi) begin
+		alu_result = `HI;
+	end
+	else if (opsave == mflo) begin
+		alu_result = `LO;
+	end
+	else if (opsave == add8) begin
+		alu_result[31:24] = (alu_in_A[31:24] + alu_in_B[31:24]);
+		alu_result[23:16] = (alu_in_A[23:16] + alu_in_B[23:16]);
+		alu_result[15:8] = (alu_in_A[15:8] + alu_in_B[15:8]);
+		alu_result[7:0] = (alu_in_A[7:0] + alu_in_B[7:0]);
+	end
+	else if (opsave == rbit) begin
+		for (i=0; i < 32; i = i+1) begin
+		alu_result[i] = alu_in_B[32-i]; end
+	end
+	else if (opsave == rev) begin
+		alu_result[31:24] = alu_in_B[7:0];
+		alu_result[23:16] = alu_in_B[15:8];
+		alu_result[15:8] = alu_in_B[23:16];
+		alu_result[7:0] = alu_in_B[31:24];
+	end
+	else if (opsave == sadd) begin
+		tempadd = alu_in_A + alu_in_B;
+		if (tempadd[32]) begin alu_result = 32'hFFFFFFFF; end
+		else alu_result = tempadd[31:0];
+	end
+	else if (opsave == ssub) begin
+		if (alu_in_B > alu_in_A) begin alu_result = 32'd0; end
+		else alu_result = (alu_in_A - alu_in_B);
+	end
   end
   3: begin //prepare to write to mem
     nstate = 3'd0;
-    if ((format == R)||(`opcode == addi)||(`opcode == andi)||(`opcode == ori)) regw = 1;
+    if ((format == R)||(`opcode == addi)||(`opcode == andi)||(`opcode == ori)||(`opcode == jal)) regw = 1;
     else if (`opcode == sw) begin
       CS = 1;
       WE = 1;
@@ -182,8 +230,10 @@ always @(posedge CLK) begin
     reg_or_imm_save <= reg_or_imm;
     alu_or_mem_save <= alu_or_mem;
   end
-  else if (state == 3'd2) alu_result_save <= alu_result;
-
+  else if (state == 3'd2) begin
+		alu_result_save <= alu_result;
+		if (opsave == mult) special_reg_product_save <= special_reg_product;
+	end
 end //always posedge clk
 endmodule
 
