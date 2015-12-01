@@ -74,7 +74,7 @@ reg [32:0] tempadd;
 
 //combinational
 assign imm_ext = (instr[15] == 1)? {16'hFFFF, instr[15:0]} : {16'h0000, instr[15:0]};//Sign extend immediate field
-assign dr = (format == R)? instr[15:11] : (format == J)? 5'd31 : if (opsave == rbit || opsave == rev)? instr[25:21] : instr[20:16]; //Destination Register MUX (MUX1)
+assign dr = (format == R)? instr[15:11] : (format == J)? 5'd31 : (opsave == rbit || opsave == rev)? instr[25:21] : instr[20:16]; //Destination Register MUX (MUX1)
 assign alu_in_A = readreg1;
 assign alu_in_B = (reg_or_imm_save)? imm_ext : readreg2; //ALU MUX (MUX2)
 assign reg_in = (alu_or_mem_save)? Mem_Bus : alu_result_save; //Data MUX
@@ -174,7 +174,7 @@ always @(*) begin
 	end
 	else if (opsave == rbit) begin
 		for (i=0; i < 32; i = i+1) begin
-		alu_result[i] = alu_in_B[32-i]; end
+		alu_result[i] = alu_in_B[31-i]; end
 	end
 	else if (opsave == rev) begin
 		alu_result[31:24] = alu_in_B[7:0];

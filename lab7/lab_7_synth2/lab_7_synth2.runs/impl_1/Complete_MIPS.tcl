@@ -120,17 +120,3 @@ if {$rc} {
   end_step route_design
 }
 
-start_step write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  write_bitstream -force Complete_MIPS.bit 
-  catch { write_sysdef -hwdef Complete_MIPS.hwdef -bitfile Complete_MIPS.bit -meminfo Complete_MIPS.mmi -ltxfile debug_nets.ltx -file Complete_MIPS.sysdef }
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-}
-
