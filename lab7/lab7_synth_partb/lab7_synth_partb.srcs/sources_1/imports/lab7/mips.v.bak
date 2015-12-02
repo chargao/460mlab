@@ -8,13 +8,12 @@
 `define HI special_reg_product_save[63:32]
 `define LO special_reg_product_save[31:0]
 
-module MIPS (CLK, CS, WE, ADDR, Mem_Bus, SW, Reg1, btnL, btnR);
+module MIPS (CLK, CS, WE, ADDR, Mem_Bus, SW, Reg1);
 input CLK;
 input [2:0] SW;
-input btnL, btnR;
 output reg CS, WE;
 output [6:0] ADDR;
-output [15:0]Reg1;
+output [31:0]Reg1;
 //output [7:0] reg1_lowbits;
 inout [31:0] Mem_Bus;
 
@@ -85,7 +84,7 @@ assign Mem_Bus = (writing)? readreg2 : 32'bZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ;
 
 //drive memory bus only during writes
 assign ADDR = (fetchDorI)? pc : alu_result_save; //ADDR Mux
-REG Register(CLK, regw, dr, `sr1, `sr2, reg_in, readreg1, readreg2, SW, Reg1, btnL, btnR);
+REG Register(CLK, regw, dr, `sr1, `sr2, reg_in, readreg1, readreg2, SW, Reg1);
 
 initial begin
   op = and1; opsave = and1;

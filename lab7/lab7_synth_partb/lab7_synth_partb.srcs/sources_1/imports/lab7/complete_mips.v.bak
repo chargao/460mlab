@@ -29,7 +29,7 @@ reg [31:0] RAM [0:127];
 
 initial begin
   /* Write your Verilog-Text IO code here */
-  $readmemh("part_B.asm",RAM);
+  $readmemh("PartB_test.asm",RAM);
 end
 
 assign Mem_Bus = ((CS == 1'b0) || (WE == 1'b1)) ? 32'bZ : data_out;
@@ -63,10 +63,9 @@ end
 always @* begin
   case ({btnL,btnR})
     2'b00 : DisplayReg = REG[2][15:0];
-    2'b01 : DisplayReg = REG[2][31:16];
+    2'b01 : DisplayReg = REG[2][32:16];
     2'b10 : DisplayReg = REG[3][15:0];
-    2'b11 : DisplayReg = REG[3][31:16];
-  endcase
+    2'b11 : DisplayReg = REG[3][32:16];
 end // always combinational
 
 always @(posedge CLK) begin
