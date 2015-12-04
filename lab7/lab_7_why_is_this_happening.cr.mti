@@ -1,0 +1,39 @@
+C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/Divider.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/Divider.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Divider
+
+Top level modules:
+	Divider
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/Debounce_sp.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/Debounce_sp.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Button_db_sp
+
+Top level modules:
+	Button_db_sp
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/mips.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/mips.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module MIPS
+
+Top level modules:
+	MIPS
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/complete_mips.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/complete_mips.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Complete_MIPS
+-- Compiling module Memory
+-- Compiling module REG
+
+Top level modules:
+	Complete_MIPS
+	REG
+
+} {} {}} C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/7_seg.v {1 {vlog -work work -stats=none C:/Modeltech_pe_edu_10.4a/examples/460mlab/lab7/lab7_synth_partb/lab7_synth_partb.srcs/sources_1/imports/lab7/7_seg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Four_Digit_7_seg_Display
+
+Top level modules:
+	Four_Digit_7_seg_Display
+
+} {} {}}

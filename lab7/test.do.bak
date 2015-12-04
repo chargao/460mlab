@@ -1,0 +1,4 @@
+force reset 0 0ns, 1 50ns, 0 100ns
+force clk 0 0ns, 1 1ns -repeat 2ns
+force "sw[1]" 1 1000ns, 0 1020ns
+run 3000ns
